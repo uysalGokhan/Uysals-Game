@@ -7,6 +7,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.uysals.game.warofages.GameConfig;
 import com.uysals.game.warofages.WarofAges;
+import com.uysals.game.warofages.assets.AssetDescriptors;
 import com.uysals.game.warofages.utils.GdxUtils;
 
 public class LoadingScreen extends ScreenAdapter {
@@ -28,10 +29,14 @@ public class LoadingScreen extends ScreenAdapter {
     public void show() {
         camera = new OrthographicCamera();
         viewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
+
+        assetManager.load(AssetDescriptors.FLOORS);
     }
 
     @Override
     public void render(float delta) {
+        update(delta);
+
         GdxUtils.clearScreen();
         viewport.apply();
 

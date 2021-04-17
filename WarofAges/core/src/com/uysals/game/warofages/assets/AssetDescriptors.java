@@ -8,6 +8,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public class AssetDescriptors {
 
+    public static final AssetDescriptor<TextureAtlas> FLOORS =
+            new AssetDescriptor<TextureAtlas>(AssetPaths.FLOORS, TextureAtlas.class);
+
     private AssetDescriptors() {
     }
 }
