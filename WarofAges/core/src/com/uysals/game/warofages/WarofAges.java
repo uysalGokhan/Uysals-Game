@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Logger;
+import com.uysals.game.warofages.screens.loading.LoadingScreen;
 
 public class WarofAges extends Game {
 
@@ -29,7 +30,7 @@ public class WarofAges extends Game {
 
 		batch = new SpriteBatch();
 
-		//newScreen(new LoadingScreen(this));
+		newScreen(new LoadingScreen(this));
 	}
 
 	public void newScreen(Screen screen) {

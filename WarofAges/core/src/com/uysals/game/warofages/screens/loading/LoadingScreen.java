@@ -3,8 +3,11 @@ package com.uysals.game.warofages.screens.loading;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.uysals.game.warofages.GameConfig;
 import com.uysals.game.warofages.WarofAges;
+import com.uysals.game.warofages.utils.GdxUtils;
 
 public class LoadingScreen extends ScreenAdapter {
 
@@ -23,12 +26,18 @@ public class LoadingScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-
+        camera = new OrthographicCamera();
+        viewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
     }
 
     @Override
     public void render(float delta) {
+        GdxUtils.clearScreen();
+        viewport.apply();
 
+        game.getBatch().setProjectionMatrix(camera.combined);
+        game.getBatch().begin();
+        game.getBatch().end();
     }
 
     @Override
