@@ -31,6 +31,7 @@ public class LoadingScreen extends ScreenAdapter {
         viewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
 
         assetManager.load(AssetDescriptors.FLOORS);
+        assetManager.load(AssetDescriptors.GUI);
     }
 
     @Override

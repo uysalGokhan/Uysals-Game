@@ -1,0 +1,48 @@
+
+gui.png
+size: 4096, 4096
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+iconbackdrop
+  rotate: false
+  xy: 1316, 598
+  size: 373, 369
+  orig: 373, 369
+  offset: 0, 0
+  index: -1
+loginbutton
+  rotate: false
+  xy: 2, 584
+  size: 1312, 383
+  orig: 1312, 383
+  offset: 0, 0
+  index: -1
+logintable
+  rotate: false
+  xy: 2, 969
+  size: 3761, 2368
+  orig: 3761, 2368
+  offset: 0, 0
+  index: -1
+passwordicon
+  rotate: false
+  xy: 2, 2
+  size: 150, 195
+  orig: 150, 195
+  offset: 0, 0
+  index: -1
+singupbutton
+  rotate: false
+  xy: 2, 199
+  size: 1312, 383
+  orig: 1312, 383
+  offset: 0, 0
+  index: -1
+usericon
+  rotate: false
+  xy: 3765, 3145
+  size: 173, 192
+  orig: 173, 192
+  offset: 0, 0
+  index: -1

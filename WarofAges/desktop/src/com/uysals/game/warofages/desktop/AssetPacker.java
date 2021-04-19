@@ -16,15 +16,15 @@ public class AssetPacker {
 
         TexturePacker.Settings settings = new TexturePacker.Settings();
         settings.debug = DRAW_DEBUG_OUTLINE;
-        settings.maxHeight = 2048;
-        settings.maxWidth = 2048;
+        settings.maxHeight = 4096;
+        settings.maxWidth = 4096;
 
         new File(ASSETS_PATH + "/gameBasic").mkdirs();
 
         TexturePacker.process(settings,
                 RAW_ASSETS_PATH + "",
                 ASSETS_PATH + "/gameBasic",
-                "floor");
+                "gui");
 
 
 
