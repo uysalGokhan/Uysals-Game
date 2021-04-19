@@ -8,6 +8,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.uysals.game.warofages.GameConfig;
 import com.uysals.game.warofages.WarofAges;
 import com.uysals.game.warofages.assets.AssetDescriptors;
+import com.uysals.game.warofages.screens.login.LoginScreen;
 import com.uysals.game.warofages.utils.GdxUtils;
 
 public class LoadingScreen extends ScreenAdapter {
@@ -64,6 +65,8 @@ public class LoadingScreen extends ScreenAdapter {
     private void update(float delta) {
         progress = assetManager.getProgress();
 
-        assetManager.update();
+        if(assetManager.update()) {
+            game.newScreen(new LoginScreen(game));
+        }
     }
 }
