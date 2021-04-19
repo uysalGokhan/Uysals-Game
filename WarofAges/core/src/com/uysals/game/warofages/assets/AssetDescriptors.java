@@ -11,6 +11,9 @@ public class AssetDescriptors {
     public static final AssetDescriptor<TextureAtlas> FLOORS =
             new AssetDescriptor<TextureAtlas>(AssetPaths.FLOORS, TextureAtlas.class);
 
+    public static final AssetDescriptor<TextureAtlas> GUI =
+            new AssetDescriptor<TextureAtlas>(AssetPaths.GUI, TextureAtlas.class);
+
     private AssetDescriptors() {
     }
 }
