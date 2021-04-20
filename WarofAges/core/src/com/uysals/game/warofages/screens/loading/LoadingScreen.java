@@ -33,6 +33,11 @@ public class LoadingScreen extends ScreenAdapter {
 
         assetManager.load(AssetDescriptors.FLOORS);
         assetManager.load(AssetDescriptors.GUI);
+
+        assetManager.load(AssetDescriptors.FONT24);
+        assetManager.load(AssetDescriptors.FONT32);
+        assetManager.load(AssetDescriptors.FONT40);
+        assetManager.load(AssetDescriptors.FONT48);
     }
 
     @Override
