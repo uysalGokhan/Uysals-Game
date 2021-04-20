@@ -6,42 +6,49 @@ filter: Nearest, Nearest
 repeat: none
 iconbackdrop
   rotate: false
-  xy: 1316, 598
+  xy: 2, 2
   size: 373, 369
   orig: 373, 369
   offset: 0, 0
   index: -1
 loginbutton
   rotate: false
-  xy: 2, 584
+  xy: 2, 758
   size: 1312, 383
   orig: 1312, 383
   offset: 0, 0
   index: -1
 logintable
   rotate: false
-  xy: 2, 969
+  xy: 2, 1502
   size: 3761, 2368
   orig: 3761, 2368
   offset: 0, 0
   index: -1
 passwordicon
   rotate: false
-  xy: 2, 2
+  xy: 1571, 1305
   size: 150, 195
   orig: 150, 195
   offset: 0, 0
   index: -1
 singupbutton
   rotate: false
-  xy: 2, 199
+  xy: 2, 373
   size: 1312, 383
   orig: 1312, 383
   offset: 0, 0
   index: -1
+text
+  rotate: false
+  xy: 2, 1143
+  size: 1567, 357
+  orig: 1567, 357
+  offset: 0, 0
+  index: -1
 usericon
   rotate: false
-  xy: 3765, 3145
+  xy: 3765, 3678
   size: 173, 192
   orig: 173, 192
   offset: 0, 0
