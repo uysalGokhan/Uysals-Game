@@ -27,6 +27,8 @@ public class MainPageController implements InputProcessor {
 
     private Vector2 lastTouch = new Vector2();
 
+    private int selectedFloor = -1;
+
     public MainPageController(WarofAges game) {
         this.game = game;
         this.assetManager = game.getAssetManager();
@@ -82,6 +84,15 @@ public class MainPageController implements InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         lastTouch.set(screenX, screenY);
+        Vector2 worldTouch = viewport.unproject(new Vector2(lastTouch));
+        selectedFloor = -1;
+        for(int i = 0; i < floors.size(); i++) {
+            if(distance(worldTouch, new Vector2(floors.get(i).xCoor, floors.get(i).yCoor)) < 186f) {
+                selectedFloor = i;
+                System.out.println(i);
+                break;
+            }
+        }
         return false;
     }
 
@@ -98,6 +109,7 @@ public class MainPageController implements InputProcessor {
         Vector2 delta = newTouch.cpy().sub(lastTouch);
         lastTouch = newTouch;
         camera.translate(-delta.x, delta.y);
+        selectedFloor = -1;
         return false;
     }
 
@@ -109,5 +121,9 @@ public class MainPageController implements InputProcessor {
     @Override
     public boolean scrolled(float amountX, float amountY) {
         return false;
+    }
+
+    private double distance(Vector2 object1, Vector2 object2){
+        return Math.sqrt(Math.pow((object2.x - object1.x), 2) + Math.pow((object2.y - object1.y), 2));
     }
 }
