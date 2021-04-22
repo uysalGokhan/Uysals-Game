@@ -4,7 +4,10 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Disposable;
+import com.uysals.game.warofages.objects.Floor;
 import com.uysals.game.warofages.utils.GdxUtils;
+
+import java.util.ArrayList;
 
 public class MainPageRenderer implements Disposable {
 
@@ -24,13 +27,23 @@ public class MainPageRenderer implements Disposable {
     }
 
     public void render(float delta) {
-        GdxUtils.clearScreen(Color.BROWN);
+        GdxUtils.clearScreen();
         // render gameplay
         renderGamePlay();
     }
 
     private void renderGamePlay() {
+        controller.getViewport().apply();
+        batch.setProjectionMatrix(controller.getCamera().combined);
+        batch.begin();
 
+        ArrayList<Floor> floors = controller.getFloors();
+
+        for(int i = 0; i < floors.size(); i++) {
+            batch.draw(floors.get(i).region, floors.get(i).xCoor, floors.get(i).yCoor);
+        }
+
+        batch.end();
     }
 
     public void resize(int width, int height) {
