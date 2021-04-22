@@ -71,38 +71,10 @@ public class LoginRenderer implements Disposable {
 
     public void render(float delta) {
         GdxUtils.clearScreen();
-
-        controlButton();
         // render gameplay
         renderGamePlay();
     }
 
-    public void controlButton() {
-        /*if (Gdx.input.justTouched()) {
-            Vector2 screenTouch = new Vector2(Gdx.input.getX(), Gdx.input.getY());
-            Vector2 worldTouch = viewport.unproject(new Vector2(screenTouch));
-
-            if( worldTouch.x >= GameConfig.WIDTH * 0.48f && worldTouch.x <= GameConfig.WIDTH * 0.73f
-                    && worldTouch.y >= GameConfig.HEIGHT * 0.57f && worldTouch.y <= GameConfig.HEIGHT * 0.64f) {
-                focuxText = 0;
-                Gdx.input.setOnscreenKeyboardVisible(true);
-            } else if( worldTouch.x >= GameConfig.WIDTH * 0.48f && worldTouch.x <= GameConfig.WIDTH * 0.73f
-                    && worldTouch.y >= GameConfig.HEIGHT * 0.45f && worldTouch.y <= GameConfig.HEIGHT * 0.52f) {
-                focuxText = 1;
-                Gdx.input.setOnscreenKeyboardVisible(true);
-            } else if( worldTouch.x >= GameConfig.WIDTH * 0.23f && worldTouch.x <= GameConfig.WIDTH * 0.48f
-                    && worldTouch.y >= GameConfig.HEIGHT * 0.11f && worldTouch.y <= GameConfig.HEIGHT * 0.21f) {
-                System.out.println("LOGIN");
-            } else if( worldTouch.x >= GameConfig.WIDTH * 0.52f && worldTouch.x <= GameConfig.WIDTH * 0.77f
-                    && worldTouch.y >= GameConfig.HEIGHT * 0.11f && worldTouch.y <= GameConfig.HEIGHT * 0.21f) {
-                System.out.println("SINGUP");
-            } else {
-                Gdx.input.setOnscreenKeyboardVisible(false);
-            }
-
-        }*/
-
-    }
 
     private void renderGamePlay() {
         controller.getViewport().apply();

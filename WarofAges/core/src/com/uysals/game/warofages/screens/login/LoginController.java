@@ -8,6 +8,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.uysals.game.warofages.GameConfig;
 import com.uysals.game.warofages.WarofAges;
+import com.uysals.game.warofages.screens.mainpage.MainPageScreen;
 
 public class LoginController implements InputProcessor {
 
@@ -27,7 +28,6 @@ public class LoginController implements InputProcessor {
         viewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
 
         Gdx.input.setInputProcessor(this);
-
 
     }
 
@@ -100,7 +100,7 @@ public class LoginController implements InputProcessor {
             Gdx.input.setOnscreenKeyboardVisible(true);
         } else if( worldTouch.x >= GameConfig.WIDTH * 0.23f && worldTouch.x <= GameConfig.WIDTH * 0.48f
                 && worldTouch.y >= GameConfig.HEIGHT * 0.11f && worldTouch.y <= GameConfig.HEIGHT * 0.21f) {
-            System.out.println("LOGIN");
+            game.newScreen(new MainPageScreen(game));
         } else if( worldTouch.x >= GameConfig.WIDTH * 0.52f && worldTouch.x <= GameConfig.WIDTH * 0.77f
                 && worldTouch.y >= GameConfig.HEIGHT * 0.11f && worldTouch.y <= GameConfig.HEIGHT * 0.21f) {
             System.out.println("SINGUP");
