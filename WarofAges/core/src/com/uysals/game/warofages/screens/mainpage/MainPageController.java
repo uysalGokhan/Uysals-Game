@@ -25,6 +25,8 @@ public class MainPageController implements InputProcessor {
 
     private ArrayList<Floor> floors;
 
+    private Vector2 lastTouch = new Vector2();
+
     public MainPageController(WarofAges game) {
         this.game = game;
         this.assetManager = game.getAssetManager();
@@ -79,6 +81,7 @@ public class MainPageController implements InputProcessor {
 
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+        lastTouch.set(screenX, screenY);
         return false;
     }
 
@@ -89,7 +92,12 @@ public class MainPageController implements InputProcessor {
 
     @Override
     public boolean touchDragged(int screenX, int screenY, int pointer) {
-        System.out.println(screenX + "-" + screenY + "-" + pointer);
+        Vector2 newTouch = new Vector2(screenX, screenY);
+        // delta will now hold the difference between the last and the current touch positions
+        // delta.x > 0 means the touch moved to the right, delta.x < 0 means a move to the left
+        Vector2 delta = newTouch.cpy().sub(lastTouch);
+        lastTouch = newTouch;
+        camera.translate(-delta.x, delta.y);
         return false;
     }
 
