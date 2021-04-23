@@ -1,0 +1,32 @@
+[
+  {
+    "xCoor": 760.0,
+    "yCoor": 540.0,
+    "isDisabled": false,
+    "region": 1
+  },
+  {
+    "xCoor": 960.0,
+    "yCoor": 540.0,
+    "isDisabled": false,
+    "region": 0
+  },
+  {
+    "xCoor": 1160.0,
+    "yCoor": 540.0,
+    "isDisabled": false,
+    "region": 3
+  },
+  {
+    "xCoor": 860.0,
+    "yCoor": 360.0,
+    "isDisabled": false,
+    "region": 4
+  },
+  {
+    "xCoor": 1060.0,
+    "yCoor": 360.0,
+    "isDisabled": true,
+    "region": 5
+  }
+]
