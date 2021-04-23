@@ -40,7 +40,7 @@ public class MainPageRenderer implements Disposable {
         ArrayList<Floor> floors = controller.getFloors();
 
         for(int i = 0; i < floors.size(); i++) {
-            batch.draw(floors.get(i).region, floors.get(i).xCoor - 128f, floors.get(i).yCoor - 128f);
+            floors.get(i).draw(batch);
         }
 
         batch.end();
