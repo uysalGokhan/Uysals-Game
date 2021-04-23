@@ -53,93 +53,100 @@ green6
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice1
+greencastle
   rotate: false
   xy: 518, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice2
+ice1
   rotate: false
   xy: 776, 518
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice3
+ice2
   rotate: false
   xy: 518, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice4
+ice3
   rotate: false
   xy: 776, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice5
+ice4
   rotate: false
   xy: 1034, 518
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice6
+ice5
   rotate: false
   xy: 776, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic1
+ice6
   rotate: false
   xy: 1034, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic2
+volcanic1
   rotate: false
   xy: 1292, 518
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic3
+volcanic2
   rotate: false
   xy: 1034, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic4
+volcanic3
   rotate: false
   xy: 1292, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic5
+volcanic4
   rotate: false
   xy: 1550, 518
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic6
+volcanic5
   rotate: false
   xy: 1292, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic7
+volcanic6
   rotate: false
   xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+volcanic7
+  rotate: false
+  xy: 1550, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
