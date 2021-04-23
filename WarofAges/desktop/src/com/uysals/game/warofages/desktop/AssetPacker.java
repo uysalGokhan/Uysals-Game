@@ -24,7 +24,7 @@ public class AssetPacker {
         TexturePacker.process(settings,
                 RAW_ASSETS_PATH + "",
                 ASSETS_PATH + "/gameBasic",
-                "gui");
+                "floor");
 
 
 
