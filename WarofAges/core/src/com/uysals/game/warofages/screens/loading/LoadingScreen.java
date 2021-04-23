@@ -3,6 +3,7 @@ package com.uysals.game.warofages.screens.loading;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.uysals.game.warofages.GameConfig;
@@ -71,6 +72,7 @@ public class LoadingScreen extends ScreenAdapter {
         progress = assetManager.getProgress();
 
         if(assetManager.update()) {
+            GameConfig.disabledFloor = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor");
             game.newScreen(new LoginScreen(game));
         }
     }
