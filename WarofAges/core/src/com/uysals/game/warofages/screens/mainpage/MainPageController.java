@@ -23,6 +23,9 @@ public class MainPageController implements InputProcessor {
     private OrthographicCamera camera;
     private Viewport viewport;
 
+    private OrthographicCamera menuCamera;
+    private Viewport menuViewport;
+
     private ArrayList<Floor> floors;
 
     private Vector2 lastTouch = new Vector2();
@@ -35,6 +38,9 @@ public class MainPageController implements InputProcessor {
 
         camera = new OrthographicCamera();
         viewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
+
+        menuCamera = new OrthographicCamera();
+        menuViewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, menuCamera);
 
         floors = new ArrayList<Floor>();
 
@@ -60,6 +66,14 @@ public class MainPageController implements InputProcessor {
 
     public Viewport getViewport() {
         return viewport;
+    }
+
+    public OrthographicCamera getMenuCamera() {
+        return menuCamera;
+    }
+
+    public Viewport getMenuViewport() {
+        return menuViewport;
     }
 
     public ArrayList<Floor> getFloors() {
