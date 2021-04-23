@@ -41,7 +41,7 @@ public class MainPageController implements InputProcessor {
         TextureAtlas floorAtlas = assetManager.get(AssetDescriptors.FLOORS);
 
         floors.add(new Floor(GameConfig.WORLD_CENTER_X - 200f, GameConfig.WORLD_CENTER_Y, false, floorAtlas.findRegion("green1")));
-        floors.add(new Floor(GameConfig.WORLD_CENTER_X, GameConfig.WORLD_CENTER_Y, false, floorAtlas.findRegion("green2")));
+        floors.add(new Floor(GameConfig.WORLD_CENTER_X, GameConfig.WORLD_CENTER_Y, false, floorAtlas.findRegion("greencastle")));
         floors.add(new Floor(GameConfig.WORLD_CENTER_X + 200f,  GameConfig.WORLD_CENTER_Y,false, floorAtlas.findRegion("green3")));
         floors.add(new Floor(GameConfig.WORLD_CENTER_X - 100f,  GameConfig.WORLD_CENTER_Y - 180f,false, floorAtlas.findRegion("green4")));
         floors.add(new Floor(GameConfig.WORLD_CENTER_X + 100f, GameConfig.WORLD_CENTER_Y - 180f,true, floorAtlas.findRegion("green5")));
