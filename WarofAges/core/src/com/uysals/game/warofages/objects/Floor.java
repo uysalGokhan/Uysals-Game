@@ -8,9 +8,9 @@ public class Floor {
     public float xCoor;
     public float yCoor;
     public boolean isDisabled;
-    public TextureRegion region;
+    public int region;
 
-    public Floor(float xCoor, float yCoor, boolean isDisabled, TextureRegion region) {
+    public Floor(float xCoor, float yCoor, boolean isDisabled, int region) {
         this.xCoor = xCoor;
         this.yCoor = yCoor;
         this.isDisabled = isDisabled;
@@ -18,11 +18,9 @@ public class Floor {
     }
 
     public void draw(SpriteBatch batch) {
-        if(this.isDisabled){
-            batch.draw(region, xCoor - 128f, yCoor - 128f);
+        batch.draw(GameConfig.textureRegions.get(region), xCoor - 128f, yCoor - 128f);
+        if(isDisabled) {
             batch.draw(GameConfig.disabledFloor, xCoor - 128f, yCoor - 128f);
-        } else {
-            batch.draw(region, xCoor - 128f, yCoor - 128f);
         }
     }
 }
