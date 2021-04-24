@@ -8,6 +8,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.google.gson.Gson;
@@ -43,10 +45,10 @@ public class MainPageController implements GestureDetector.GestureListener {
         this.assetManager = game.getAssetManager();
 
         camera = new OrthographicCamera();
-        viewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
+        viewport = new ExtendViewport(GameConfig.WIDTH, GameConfig.HEIGHT, camera);
 
         menuCamera = new OrthographicCamera();
-        menuViewport = new FitViewport(GameConfig.WIDTH, GameConfig.HEIGHT, menuCamera);
+        menuViewport = new ExtendViewport(GameConfig.WIDTH, GameConfig.HEIGHT, menuCamera);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         FileHandle file = Gdx.files.internal("defaultMap.json");
