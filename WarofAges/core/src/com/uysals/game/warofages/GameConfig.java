@@ -12,6 +12,7 @@ public class GameConfig {
     public static final float WORLD_CENTER_Y = HEIGHT / 2f; // world units
 
     public static TextureRegion disabledFloor = null;
+    public static TextureRegion disabledFloor2 = null;
 
     public static ArrayList<TextureRegion> textureRegions;
 }

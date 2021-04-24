@@ -76,6 +76,7 @@ public class LoadingScreen extends ScreenAdapter {
 
         if(assetManager.update()) {
             GameConfig.disabledFloor = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor");
+            GameConfig.disabledFloor2 = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor2");
 
             GameConfig.textureRegions = new ArrayList<TextureRegion>();
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("greencastle"));
@@ -84,6 +85,20 @@ public class LoadingScreen extends ScreenAdapter {
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("green3"));
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("green4"));
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("green5"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("green6"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("ice1"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("ice2"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("ice3"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("ice4"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("ice5"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("ice6"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic1"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic2"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic3"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic4"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic5"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic6"));
+            GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic7"));
 
 
             game.newScreen(new LoginScreen(game));
