@@ -94,7 +94,7 @@ public class MainPageController implements GestureDetector.GestureListener {
         selectedFloor = -1;
         Vector2 worldTouch = viewport.unproject(new Vector2(x, y));
         for(int i = 0; i < floors.size(); i++) {
-            if(distance(worldTouch, new Vector2(floors.get(i).xCoor, floors.get(i).yCoor)) < 186f) {
+            if(distance(worldTouch, new Vector2(floors.get(i).xCoor, floors.get(i).yCoor)) < 100f) {
                 selectedFloor = i;
                 floors.get(i).isSelected = true;
                 System.out.println(i);
