@@ -29,17 +29,17 @@ public class CreateDefaultMap {
         // columnCount / 2 + 1 = WIDTH / 2 = 960f;
         for(int i = 0; i < rowCount; i++) {
             for(int j = 0; j < rowCount; j++) {
-                xCoor = GameConfig.WORLD_CENTER_X + ((j - (columnCount / 2 + 1)) * 198f);
+                xCoor = ((j - (columnCount / 2 )) * 198f);
                 if(i % 2 == 0)
                     xCoor -= 100f;
-                yCoor = GameConfig.WORLD_CENTER_Y - ((i - (rowCount / 2 + 1)) * 180f);
-                if(i == rowCount / 2 + 1 && j == columnCount / 2 + 1) {
+                yCoor = - ((i - (rowCount / 2)) * 180f);
+                if(i == (rowCount / 2) && j == (columnCount / 2)) {
                     region = 0;
                 } else {
                     region = random.nextInt(floorCount) + 1;
                 }
-                if(i >= rowCount / 2 - 1 && i <= rowCount / 2 + 3 && j >= columnCount / 2 - 1 && j < columnCount / 2 + 3) {
-                    if(i >= rowCount / 2  && i <= rowCount / 2 + 2 && j >= columnCount / 2  && j < columnCount / 2 + 2) {
+                if(i >= rowCount / 2 - 2 && i <= rowCount / 2 + 2 && j >= columnCount / 2 - 2 && j < columnCount / 2 + 2) {
+                    if(i >= rowCount / 2 - 1  && i <= rowCount / 2 + 1 && j >= columnCount / 2 - 1 && j < columnCount / 2 + 1) {
                         disable = 0;
                     } else {
                         disable = 1;
