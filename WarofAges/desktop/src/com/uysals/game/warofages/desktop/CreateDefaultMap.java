@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class CreateDefaultMap {
 
-    public static int floorCount = 19;
+    public static int floorCount = 6;
     public static int rowCount = 11; // always odd number
     public static int columnCount = 11; // always odd number
 
