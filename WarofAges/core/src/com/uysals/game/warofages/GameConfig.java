@@ -11,6 +11,12 @@ public class GameConfig {
     public static final float WORLD_CENTER_X = WIDTH / 2f; // world units
     public static final float WORLD_CENTER_Y = HEIGHT / 2f; // world units
 
+    public static final float CAMERA_MIN_X = 200f;
+    public static final float CAMERA_MAX_X = 1700f;
+
+    public static final float CAMERA_MIN_Y = -50f;
+    public static final float CAMERA_MAX_Y = 1300f;
+
     public static TextureRegion disabledFloor = null;
     public static TextureRegion disabledFloor2 = null;
 
