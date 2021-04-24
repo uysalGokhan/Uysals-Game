@@ -65,6 +65,13 @@ public class MainPageRenderer implements Disposable {
         layout.setText(font32, "MENU CAMERA");
         font32.draw(batch, "MENU CAMERA", controller.getMenuViewport().getWorldWidth() * 0.9f - layout.width, controller.getMenuViewport().getWorldHeight() * 0.95f);
 
+
+
+        if(controller.getSelectedFloor() != -1) {
+            ArrayList<Floor> floors = controller.getFloors();
+            floors.get(controller.getSelectedFloor()).drawMenu(batch);
+        }
+
         batch.end();
     }
 
@@ -72,6 +79,8 @@ public class MainPageRenderer implements Disposable {
         controller.getViewport().update(width, height, true);
         controller.getCamera().position.set(0f, 0f, 0f);
         controller.getMenuViewport().update(width, height, true);
+        GameConfig.menuViewPortWith = controller.getMenuViewport().getWorldWidth();
+        GameConfig.menuViewPortHeight = controller.getMenuViewport().getWorldHeight();
     }
 
     @Override

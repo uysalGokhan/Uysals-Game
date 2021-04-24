@@ -83,6 +83,10 @@ public class MainPageController implements GestureDetector.GestureListener {
         return floors;
     }
 
+    public int getSelectedFloor() {
+        return selectedFloor;
+    }
+
     @Override
     public boolean touchDown(float x, float y, int pointer, int button) {
         return false;
@@ -91,7 +95,13 @@ public class MainPageController implements GestureDetector.GestureListener {
     @Override
     public boolean tap(float x, float y, int count, int button) {
         if(selectedFloor != -1){
+            Vector2 worldTouch = menuViewport.unproject(new Vector2(x, y));
+
+            if(worldTouch.y < 300f && floors.get(selectedFloor).controlTab(worldTouch)) {
+                return false;
+            }
             floors.get(selectedFloor).isSelected = false;
+
         }
         selectedFloor = -1;
         Vector2 worldTouch = viewport.unproject(new Vector2(x, y));
@@ -99,7 +109,6 @@ public class MainPageController implements GestureDetector.GestureListener {
             if(distance(worldTouch, new Vector2(floors.get(i).xCoor, floors.get(i).yCoor)) < 100f) {
                 selectedFloor = i;
                 floors.get(i).isSelected = true;
-                System.out.println(i);
                 break;
             }
         }

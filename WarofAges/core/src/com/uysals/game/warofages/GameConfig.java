@@ -17,9 +17,18 @@ public class GameConfig {
     public static final float CAMERA_MIN_Y = -600f;
     public static final float CAMERA_MAX_Y = 600f;
 
+    public static float menuViewPortWith = 0f;
+    public static float menuViewPortHeight = 0f;
+
     public static TextureRegion disabledFloor = null;
     public static TextureRegion disabledFloor2 = null;
     public static TextureRegion selectedFloor = null;
+    public static TextureRegion buildingMenu = null;
+
 
     public static ArrayList<TextureRegion> textureRegions;
+
+    public static ArrayList<TextureRegion> buildingRegions;
+
+    public static int[][] availableBuilds = { {}, {1}, {0}, {3}, {3}, {2, 3}, {1, 3} };
 }

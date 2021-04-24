@@ -4,191 +4,198 @@ size: 4096, 1024
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-coalMine
+buildingMenu
   rotate: false
   xy: 2, 518
-  size: 256, 256
-  orig: 256, 256
+  size: 1312, 382
+  orig: 1312, 382
   offset: 0, 0
   index: -1
-disabledFloor
+coalMine
   rotate: false
   xy: 2, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-disabledFloor2
+disabledFloor
   rotate: false
-  xy: 260, 518
+  xy: 1316, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-goldMine
+disabledFloor2
   rotate: false
   xy: 2, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-green1
+goldMine
   rotate: false
   xy: 260, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-green2
+green1
   rotate: false
-  xy: 518, 518
+  xy: 1574, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-green3
+green2
   rotate: false
   xy: 260, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-green4
+green3
   rotate: false
   xy: 518, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-green5
+green4
   rotate: false
-  xy: 776, 518
+  xy: 1832, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-green6
+green5
   rotate: false
   xy: 518, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-greencastle
+green6
   rotate: false
   xy: 776, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice1
+greencastle
   rotate: false
-  xy: 1034, 518
+  xy: 2090, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice2
+ice1
   rotate: false
   xy: 776, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice3
+ice2
   rotate: false
   xy: 1034, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice4
+ice3
   rotate: false
-  xy: 1292, 518
+  xy: 2348, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-ice5
+ice4
   rotate: false
   xy: 1034, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
+ice5
+  rotate: false
+  xy: 2606, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
 ice6
   rotate: false
-  xy: 1292, 260
+  xy: 2864, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 selectedFloor
   rotate: false
-  xy: 1550, 518
+  xy: 3122, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 stoneMine
   rotate: false
-  xy: 1292, 2
+  xy: 3380, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic1
   rotate: false
-  xy: 1550, 260
+  xy: 3638, 644
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic2
   rotate: false
-  xy: 1808, 518
+  xy: 1316, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic3
   rotate: false
-  xy: 1550, 2
+  xy: 1574, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic4
   rotate: false
-  xy: 1808, 260
+  xy: 1832, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic5
   rotate: false
-  xy: 2066, 518
+  xy: 2090, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic6
   rotate: false
-  xy: 1808, 2
+  xy: 2348, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 volcanic7
   rotate: false
-  xy: 2066, 260
+  xy: 2606, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 woodMine
   rotate: false
-  xy: 2324, 518
+  xy: 2864, 386
   size: 256, 256
   orig: 256, 256
   offset: 0, 0

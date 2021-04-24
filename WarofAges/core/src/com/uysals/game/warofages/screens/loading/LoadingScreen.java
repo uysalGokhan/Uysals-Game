@@ -79,6 +79,7 @@ public class LoadingScreen extends ScreenAdapter {
             GameConfig.disabledFloor = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor");
             GameConfig.disabledFloor2 = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor2");
             GameConfig.selectedFloor = assetManager.get(AssetDescriptors.FLOORS).findRegion("selectedFloor");
+            GameConfig.buildingMenu = assetManager.get(AssetDescriptors.FLOORS).findRegion("buildingMenu");
 
             GameConfig.textureRegions = new ArrayList<TextureRegion>();
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("greencastle"));
@@ -101,6 +102,12 @@ public class LoadingScreen extends ScreenAdapter {
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic5"));
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic6"));
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("volcanic7"));
+
+            GameConfig.buildingRegions = new ArrayList<TextureRegion>();
+            GameConfig.buildingRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("woodMine"));
+            GameConfig.buildingRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("goldMine"));
+            GameConfig.buildingRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("stoneMine"));
+            GameConfig.buildingRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("coalMine"));
 
 
             game.newScreen(new LoginScreen(game));
