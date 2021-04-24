@@ -109,51 +109,58 @@ ice6
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic1
+selectedFloor
   rotate: false
   xy: 1034, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic2
+volcanic1
   rotate: false
   xy: 1292, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic3
+volcanic2
   rotate: false
   xy: 1550, 518
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic4
+volcanic3
   rotate: false
   xy: 1292, 2
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic5
+volcanic4
   rotate: false
   xy: 1550, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic6
+volcanic5
   rotate: false
   xy: 1808, 518
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-volcanic7
+volcanic6
   rotate: false
   xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+volcanic7
+  rotate: false
+  xy: 1808, 260
   size: 256, 256
   orig: 256, 256
   offset: 0, 0

@@ -1,5 +1,6 @@
 package com.uysals.game.warofages.screens.loading;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -77,6 +78,7 @@ public class LoadingScreen extends ScreenAdapter {
         if(assetManager.update()) {
             GameConfig.disabledFloor = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor");
             GameConfig.disabledFloor2 = assetManager.get(AssetDescriptors.FLOORS).findRegion("disabledFloor2");
+            GameConfig.selectedFloor = assetManager.get(AssetDescriptors.FLOORS).findRegion("selectedFloor");
 
             GameConfig.textureRegions = new ArrayList<TextureRegion>();
             GameConfig.textureRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("greencastle"));
