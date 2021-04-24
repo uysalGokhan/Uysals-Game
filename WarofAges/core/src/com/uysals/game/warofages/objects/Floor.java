@@ -7,10 +7,10 @@ import com.uysals.game.warofages.GameConfig;
 public class Floor {
     public float xCoor;
     public float yCoor;
-    public boolean isDisabled;
+    public int isDisabled;
     public int region;
 
-    public Floor(float xCoor, float yCoor, boolean isDisabled, int region) {
+    public Floor(float xCoor, float yCoor, int isDisabled, int region) {
         this.xCoor = xCoor;
         this.yCoor = yCoor;
         this.isDisabled = isDisabled;
@@ -19,8 +19,10 @@ public class Floor {
 
     public void draw(SpriteBatch batch) {
         batch.draw(GameConfig.textureRegions.get(region), xCoor - 128f, yCoor - 128f);
-        if(isDisabled) {
+        if(isDisabled == 1) {
             batch.draw(GameConfig.disabledFloor, xCoor - 128f, yCoor - 128f);
+        } else if(isDisabled == 2) {
+            batch.draw(GameConfig.disabledFloor2, xCoor - 128f, yCoor - 128f);
         }
     }
 }
