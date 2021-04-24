@@ -113,6 +113,14 @@ public class MainPageController implements GestureDetector.GestureListener {
     @Override
     public boolean pan(float x, float y, float deltaX, float deltaY) {
         camera.translate(-deltaX, deltaY);
+        if(camera.position.x < GameConfig.CAMERA_MIN_X)
+            camera.position.x = GameConfig.CAMERA_MIN_X;
+        if(camera.position.x > GameConfig.CAMERA_MAX_X)
+            camera.position.x = GameConfig.CAMERA_MAX_X;
+        if(camera.position.y < GameConfig.CAMERA_MIN_Y)
+            camera.position.y = GameConfig.CAMERA_MIN_Y;
+        if(camera.position.y > GameConfig.CAMERA_MAX_Y)
+            camera.position.y = GameConfig.CAMERA_MAX_Y;
         return false;
     }
 
