@@ -6,6 +6,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.input.GestureDetector;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -20,7 +21,7 @@ import com.uysals.game.warofages.objects.Floor;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainPageController implements InputProcessor {
+public class MainPageController implements GestureDetector.GestureListener {
 
     private WarofAges game;
     private  final AssetManager assetManager;
@@ -52,7 +53,7 @@ public class MainPageController implements InputProcessor {
         String text = file.readString();
         floors = gson.fromJson(text, new TypeToken<List<Floor>>(){}.getType());
 
-        Gdx.input.setInputProcessor(this);
+        Gdx.input.setInputProcessor(new GestureDetector(this));
 
     }
 
@@ -81,25 +82,14 @@ public class MainPageController implements InputProcessor {
     }
 
     @Override
-    public boolean keyDown(int keycode) {
+    public boolean touchDown(float x, float y, int pointer, int button) {
         return false;
     }
 
     @Override
-    public boolean keyUp(int keycode) {
-        return false;
-    }
-
-    @Override
-    public boolean keyTyped(char character) {
-        return false;
-    }
-
-    @Override
-    public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        lastTouch.set(screenX, screenY);
-        Vector2 worldTouch = viewport.unproject(new Vector2(lastTouch));
+    public boolean tap(float x, float y, int count, int button) {
         selectedFloor = -1;
+        Vector2 worldTouch = viewport.unproject(new Vector2(x, y));
         for(int i = 0; i < floors.size(); i++) {
             if(distance(worldTouch, new Vector2(floors.get(i).xCoor, floors.get(i).yCoor)) < 186f) {
                 selectedFloor = i;
@@ -111,30 +101,50 @@ public class MainPageController implements InputProcessor {
     }
 
     @Override
-    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
+    public boolean longPress(float x, float y) {
         return false;
     }
 
     @Override
-    public boolean touchDragged(int screenX, int screenY, int pointer) {
-        Vector2 newTouch = new Vector2(screenX, screenY);
-        // delta will now hold the difference between the last and the current touch positions
-        // delta.x > 0 means the touch moved to the right, delta.x < 0 means a move to the left
-        Vector2 delta = newTouch.cpy().sub(lastTouch);
-        lastTouch = newTouch;
-        camera.translate(-delta.x, delta.y);
-        selectedFloor = -1;
+    public boolean fling(float velocityX, float velocityY, int button) {
         return false;
     }
 
     @Override
-    public boolean mouseMoved(int screenX, int screenY) {
+    public boolean pan(float x, float y, float deltaX, float deltaY) {
+        camera.translate(-deltaX, deltaY);
         return false;
     }
 
     @Override
-    public boolean scrolled(float amountX, float amountY) {
+    public boolean panStop(float x, float y, int pointer, int button) {
         return false;
+    }
+
+    @Override
+    public boolean zoom(float initialDistance, float distance) {
+        if((initialDistance / distance) > 1f) {
+            camera.zoom = camera.zoom + ((initialDistance / distance) - 1f) / 50f;
+            camera.zoom = Math.min(camera.zoom, 2f);
+        } else if((initialDistance / distance) < 0.5f) {
+            camera.zoom = camera.zoom - ( 1f - (initialDistance / distance)) / 50f;
+            camera.zoom = Math.max(camera.zoom, 1f);
+        }
+
+        //camera.zoom = (initialDistance / distance) * camera.zoom;
+        camera.update();
+        System.out.println((initialDistance / distance) + "-" + camera.zoom);
+        return false;
+    }
+
+    @Override
+    public boolean pinch(Vector2 initialPointer1, Vector2 initialPointer2, Vector2 pointer1, Vector2 pointer2) {
+        return false;
+    }
+
+    @Override
+    public void pinchStop() {
+
     }
 
     private double distance(Vector2 object1, Vector2 object2){
