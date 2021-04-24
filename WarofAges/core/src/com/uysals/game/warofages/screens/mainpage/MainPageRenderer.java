@@ -63,13 +63,14 @@ public class MainPageRenderer implements Disposable {
         batch.begin();
 
         layout.setText(font32, "MENU CAMERA");
-        font32.draw(batch, "MENU CAMERA", GameConfig.WIDTH * 0.9f - layout.width, GameConfig.HEIGHT * 0.95f);
+        font32.draw(batch, "MENU CAMERA", controller.getMenuViewport().getWorldWidth() * 0.9f - layout.width, controller.getMenuViewport().getWorldHeight() * 0.95f);
 
         batch.end();
     }
 
     public void resize(int width, int height) {
         controller.getViewport().update(width, height, true);
+        controller.getCamera().position.set(0f, 0f, 0f);
         controller.getMenuViewport().update(width, height, true);
     }
 

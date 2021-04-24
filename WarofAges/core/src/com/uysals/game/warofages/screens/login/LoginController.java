@@ -87,6 +87,11 @@ public class LoginController implements InputProcessor {
 
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+        return false;
+    }
+
+    @Override
+    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
         Vector2 screenTouch = new Vector2(Gdx.input.getX(), Gdx.input.getY());
         Vector2 worldTouch = viewport.unproject(new Vector2(screenTouch));
 
@@ -107,11 +112,6 @@ public class LoginController implements InputProcessor {
         } else {
             Gdx.input.setOnscreenKeyboardVisible(false);
         }
-        return false;
-    }
-
-    @Override
-    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
         return false;
     }
 
