@@ -31,4 +31,6 @@ public class GameConfig {
     public static ArrayList<TextureRegion> buildingRegions;
 
     public static int[][] availableBuilds = { {}, {1}, {0}, {3}, {3}, {2, 3}, {1, 3} };
+
+    public static String dummyTest = "DummyTest";
 }
