@@ -19,6 +19,7 @@ public class GameConfig {
 
     public static TextureRegion disabledFloor = null;
     public static TextureRegion disabledFloor2 = null;
+    public static TextureRegion selectedFloor = null;
 
     public static ArrayList<TextureRegion> textureRegions;
 }
