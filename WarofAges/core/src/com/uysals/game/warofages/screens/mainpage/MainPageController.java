@@ -94,22 +94,26 @@ public class MainPageController implements GestureDetector.GestureListener {
 
     @Override
     public boolean tap(float x, float y, int count, int button) {
-        if(selectedFloor != -1){
-            Vector2 worldTouch = menuViewport.unproject(new Vector2(x, y));
-
-            if(worldTouch.y < 300f && floors.get(selectedFloor).controlTab(worldTouch)) {
-                return false;
-            }
-            floors.get(selectedFloor).isSelected = false;
-
-        }
-        selectedFloor = -1;
         Vector2 worldTouch = viewport.unproject(new Vector2(x, y));
         for(int i = 0; i < floors.size(); i++) {
             if(distance(worldTouch, new Vector2(floors.get(i).xCoor, floors.get(i).yCoor)) < 100f) {
-                selectedFloor = i;
-                floors.get(i).isSelected = true;
-                break;
+                if(selectedFloor == i){
+                    Vector2 menuWorldTouch = menuViewport.unproject(new Vector2(x, y));
+
+                    if(menuWorldTouch.y < 300f && floors.get(selectedFloor).controlTab(menuWorldTouch)) {
+                        return false;
+                    }
+                    floors.get(selectedFloor).isSelected = false;
+                    selectedFloor = -1;
+                    break;
+                } else {
+                    if(selectedFloor != -1){
+                        floors.get(selectedFloor).isSelected = false;
+                    }
+                    selectedFloor = i;
+                    floors.get(i).isSelected = true;
+                    break;
+                }
             }
         }
         return false;
