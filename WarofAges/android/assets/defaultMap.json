@@ -254,7 +254,7 @@
   {
     "xCoor": -396.0,
     "yCoor": 360.0,
-    "isDisabled": 1,
+    "isDisabled": 2,
     "region": 1,
     "isSelected": false
   },
@@ -331,14 +331,14 @@
   {
     "xCoor": -496.0,
     "yCoor": 180.0,
-    "isDisabled": 1,
+    "isDisabled": 2,
     "region": 3,
     "isSelected": false
   },
   {
     "xCoor": -298.0,
     "yCoor": 180.0,
-    "isDisabled": 0,
+    "isDisabled": 1,
     "region": 1,
     "isSelected": false
   },
@@ -352,14 +352,14 @@
   {
     "xCoor": 98.0,
     "yCoor": 180.0,
-    "isDisabled": 1,
+    "isDisabled": 0,
     "region": 3,
     "isSelected": false
   },
   {
     "xCoor": 296.0,
     "yCoor": 180.0,
-    "isDisabled": 2,
+    "isDisabled": 1,
     "region": 5,
     "isSelected": false
   },
@@ -429,14 +429,14 @@
   {
     "xCoor": 198.0,
     "yCoor": -0.0,
-    "isDisabled": 1,
+    "isDisabled": 0,
     "region": 2,
     "isSelected": false
   },
   {
     "xCoor": 396.0,
     "yCoor": -0.0,
-    "isDisabled": 2,
+    "isDisabled": 1,
     "region": 2,
     "isSelected": false
   },
@@ -485,14 +485,14 @@
   {
     "xCoor": -496.0,
     "yCoor": -180.0,
-    "isDisabled": 1,
+    "isDisabled": 2,
     "region": 4,
     "isSelected": false
   },
   {
     "xCoor": -298.0,
     "yCoor": -180.0,
-    "isDisabled": 0,
+    "isDisabled": 1,
     "region": 2,
     "isSelected": false
   },
@@ -506,14 +506,14 @@
   {
     "xCoor": 98.0,
     "yCoor": -180.0,
-    "isDisabled": 1,
+    "isDisabled": 0,
     "region": 5,
     "isSelected": false
   },
   {
     "xCoor": 296.0,
     "yCoor": -180.0,
-    "isDisabled": 2,
+    "isDisabled": 1,
     "region": 6,
     "isSelected": false
   },
@@ -562,7 +562,7 @@
   {
     "xCoor": -396.0,
     "yCoor": -360.0,
-    "isDisabled": 1,
+    "isDisabled": 2,
     "region": 3,
     "isSelected": false
   },
