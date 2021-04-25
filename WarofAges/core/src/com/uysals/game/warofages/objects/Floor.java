@@ -33,14 +33,14 @@ public class Floor {
         } else if(isDisabled == 2) {
             batch.draw(GameConfig.disabledFloor2, xCoor - 128f, yCoor - 128f);
         }
-        if(isSelected){
+        if(isSelected && isDisabled != 2){
             batch.draw(GameConfig.selectedFloor, xCoor -128f, yCoor - 128f);
         }
     }
 
     public void drawMenu(SpriteBatch batch) {
         float needWidth = GameConfig.availableBuilds[region].length * 300f - 44f;
-        if(region != 0 && building == 0) {
+        if(region != 0 && building == 0 && isDisabled != 2) {
             batch.draw(GameConfig.buildingMenu, 10f, 0f, GameConfig.menuViewPortWith - 20f, 300f);
 
             for(int i = 0; i < GameConfig.availableBuilds[region].length; i++) {
@@ -50,7 +50,7 @@ public class Floor {
     }
 
     public boolean controlTab(Vector2 worldTouch) {
-        if(region != 0 && building == 0) {
+        if(region != 0 && building == 0 && isDisabled != 2) {
             float needWidth = GameConfig.availableBuilds[region].length * 300f - 44f;
             for(int i = 0; i < GameConfig.availableBuilds[region].length; i++) {
                 if(distance(worldTouch, new Vector2(GameConfig.menuViewPortWith / 2 - (needWidth / 2) + (i * 300f) + 128f, 150f)) < 100f) {
