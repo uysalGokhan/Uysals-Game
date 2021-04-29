@@ -109,6 +109,10 @@ public class LoadingScreen extends ScreenAdapter {
             GameConfig.buildingRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("stoneMine"));
             GameConfig.buildingRegions.add(assetManager.get(AssetDescriptors.FLOORS).findRegion("coalMine"));
 
+            GameConfig.resourcesAssets[0] = assetManager.get(AssetDescriptors.FLOORS).findRegion("wood");
+            GameConfig.resourcesAssets[1] = assetManager.get(AssetDescriptors.FLOORS).findRegion("stone");
+            GameConfig.resourcesAssets[2] = assetManager.get(AssetDescriptors.FLOORS).findRegion("gold");
+            GameConfig.resourcesAssets[3] = assetManager.get(AssetDescriptors.FLOORS).findRegion("coal");
 
             game.newScreen(new LoginScreen(game));
         }

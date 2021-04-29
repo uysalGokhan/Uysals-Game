@@ -38,6 +38,8 @@ public class MainPageController implements GestureDetector.GestureListener {
 
     private Vector2 lastTouch = new Vector2();
 
+    private float[] resources = {0f, 0f, 0f, 0f};
+
     private int selectedFloor = -1;
 
     public MainPageController(WarofAges game) {
@@ -60,7 +62,10 @@ public class MainPageController implements GestureDetector.GestureListener {
     }
 
     public void update(float delta) {
-
+        resources[0] += 5 * delta;
+        resources[1] += 4 * delta;
+        resources[2] += 3 * delta;
+        resources[3] += 1 * delta;
     }
 
     public OrthographicCamera getCamera() {
@@ -85,6 +90,10 @@ public class MainPageController implements GestureDetector.GestureListener {
 
     public int getSelectedFloor() {
         return selectedFloor;
+    }
+
+    public float[] getResources() {
+        return resources;
     }
 
     @Override

@@ -62,10 +62,26 @@ public class MainPageRenderer implements Disposable {
         batch.setProjectionMatrix(controller.getMenuCamera().combined);
         batch.begin();
 
-        layout.setText(font32, "MENU CAMERA");
-        font32.draw(batch, "MENU CAMERA", controller.getMenuViewport().getWorldWidth() * 0.9f - layout.width, controller.getMenuViewport().getWorldHeight() * 0.95f);
+        //layout.setText(font32, "MENU CAMERA");
+        //font32.draw(batch, "MENU CAMERA", controller.getMenuViewport().getWorldWidth() * 0.9f - layout.width, controller.getMenuViewport().getWorldHeight() * 0.95f);
+
+        float[] resources = controller.getResources();
 
 
+
+        for(int i = 0; i < 4; i++) {
+            batch.draw(GameConfig.buildingMenu, controller.getMenuViewport().getWorldWidth() * 0.25f * i, controller.getMenuViewport().getWorldHeight() * 0.90f,
+                    controller.getMenuViewport().getWorldWidth() * 0.25f, controller.getMenuViewport().getWorldHeight() * 0.1f);
+
+            batch.draw(GameConfig.resourcesAssets[i], controller.getMenuViewport().getWorldWidth() * 0.25f * i + 100f,
+                    controller.getMenuViewport().getWorldHeight() * 0.90f + controller.getMenuViewport().getWorldHeight() * 0.05f - 30f,
+                    60f, 60f);
+
+            //layout.setText(font32, resources[i] + "");
+            font32.draw(batch, String.format("%.2f", resources[i]), controller.getMenuViewport().getWorldWidth() * 0.25f * i + 200f,
+                    controller.getMenuViewport().getWorldHeight() * 0.90f + controller.getMenuViewport().getWorldHeight() * 0.05f);
+
+        }
 
         if(controller.getSelectedFloor() != -1) {
             ArrayList<Floor> floors = controller.getFloors();
